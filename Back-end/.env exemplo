@@ -1,0 +1,2 @@
+GROQ_API_KEY = seu_token_aqui //Aqui você colocaria sua chave API que o qroq gerou
+PORT = 8080 

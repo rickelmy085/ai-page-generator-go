@@ -1,0 +1,13 @@
+.env
+
+/Back-end/vendor/
+/Back-end/go.sum
+
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/Back-end/bin/
+ 
+.DS_Store
