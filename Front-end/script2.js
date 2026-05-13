@@ -15,9 +15,14 @@ async function gerarCodigo() {
         let resposta = await fetch(endereco, {
             method: "POST",
             headers: {
-                "Content-Type": "text/plain"
+                "Content-Type": "application/json"
             },
-            body: promptUser
+            body: JSON.stringify({
+                messages: [
+                    role: "user",
+                    content: promptUser,
+                ]
+            })
         });
 
         let resultado = await resposta.text();
