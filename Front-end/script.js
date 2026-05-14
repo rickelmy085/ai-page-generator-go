@@ -19,8 +19,10 @@ async function gerarCodigo() {
             },
             body: JSON.stringify({
                 messages: [
+                    {
                     role: "user",
                     content: promptUser,
+                    }
                 ]
             })
         });
@@ -31,7 +33,7 @@ async function gerarCodigo() {
         espacoSite.srcdoc = resultado; //O srcdoc vai pegar o codigo feito e renderiza no Iframe
 
     } catch (err) {
-        console.err("Erro na comunicação com o servido:", err);
+        console.error("Erro na comunicação com o servido:", err);
         espacoCodigo.textContent = "Erro ao conectar com o servido GO.";
     }
 }
